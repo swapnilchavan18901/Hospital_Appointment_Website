@@ -15,11 +15,14 @@
     <title>Document</title>
   </head>
   <body>
+  <?php error_reporting(0); ?> 
+ 
     <nav class="navbar">
+      <span class="logo">
+        <img src="./assets/pharmacy.png" class="log" />
+        <span class="">GPPhospitals</span>
+      </span>
       <ul class="ul_bar">
-        <span class="logo">
-          <a href="#" class="a">GPPhospitals</a>
-        </span>
         <li>
           <a href="#" class="a">ABOUT US</a>
         </li>
@@ -39,7 +42,7 @@
         <img src="./assets/twitter.png" />
       </ul>
     </nav>
-
+    <hr style="height:10px">
     <div class="container">
       <div class="con1">
         <span class="span_consult">Consult</span>
@@ -47,7 +50,7 @@
         ><span>AT YOUR COMFORT</span>
       </div>
 
-      <form class="form">
+      <form class="form" action="index.php" method="POST">
         <div class="bkapt">BOOK APPOINTMENT</div>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Full Name</label>
@@ -55,7 +58,7 @@
             type="text"
             placeholder="Your Name"
             class="form-control"
-            id="name"
+            name="name"
           />
         </div>
         <div class="mb-3">
@@ -65,7 +68,7 @@
           <input
             type="email"
             class="form-control"
-            id="email"
+            name="email"
             placeholder="example@mail.com"
           />
         </div>
@@ -77,7 +80,7 @@
             placeholder="+91 0000000000"
             type="tel"
             class="form-control"
-            id="contact"
+            name="contact"
           />
         </div>
         <div class="mb-3">
@@ -86,15 +89,31 @@
             placeholder="Type your message"
             type="text"
             class="form-control"
-            id="message"
+            name="message"
           />
         </div>
 
-        <button class="button">Submit</button>
+        <button class="button" type="submit">Submit</button>
       </form>
     </div>
     <?php
+      $usernam=$_POST["name"];
+      $email=$_POST["email"];
+      $contact=$_POST["contact"];
+      $message=$_POST["message"];
+      $success=false;
+      if($_SERVER['REQUEST_METHOD'] === 'POST') {
+        require './php_files/DB.php';
     
-    ?>
+      }
+    else{
+      echo `<div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div> `;
+    }
+  ?>
   </body>
 </html>
