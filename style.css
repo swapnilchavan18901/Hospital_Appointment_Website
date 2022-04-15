@@ -29,14 +29,22 @@ body {
   text-decoration: none;
   font-size: 30px;
   border-radius: 10px;
+  margin-bottom: 100px;
 }
 .log {
   border: 3px solid white;
   background-color: #fff;
 }
 .ul_bar {
+  width: 1020px;
+
+  margin-bottom: 80px;
   display: flex;
+  border: 3px solid #001d3d;
+  margin-right: 70px;
+  border-radius: 10px;
 }
+
 li {
   list-style: none;
   padding: 10px 10px;
@@ -47,24 +55,18 @@ li {
   text-decoration: none;
   font-size: 17px;
 }
-.iconui {
+/* .iconui {
   display: flex;
   padding: 10px 10px;
   margin-right: 7%;
-}
+} */
 img {
   height: 40px;
   padding: 5px 4px;
   margin: 20px;
   transition: all 250ms ease-in-out;
 }
-hr {
-  width: 90%;
-  margin: 30px;
-  margin-left: 5%;
-  color: #001d3d;
-  height: 100px;
-}
+
 .container {
   width: 100%;
   display: flex;
@@ -88,6 +90,9 @@ hr {
   width: 35%;
   margin-left: 21%;
   margin-top: 3%;
+  border: 3px solid #001d3d;
+  padding: 10px 10px;
+  border-radius: 10px;
   display: flex;
   color: #001d3d;
   flex-direction: column;

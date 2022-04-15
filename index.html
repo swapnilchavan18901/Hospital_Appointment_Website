@@ -12,11 +12,11 @@
     />
     <link rel="stylesheet" href="style.css" />
 
-    <title>Document</title>
+    <title>GPPhospitals</title>
   </head>
   <body>
-  <?php error_reporting(0); ?> 
- 
+    <?php error_reporting(0); ?>
+
     <nav class="navbar">
       <span class="logo">
         <img src="./assets/pharmacy.png" class="log" />
@@ -29,12 +29,11 @@
         <li>
           <a href="#" class="a"> Find a Docter</a>
         </li>
-
         <li>
           <a href="#" class="a"> CONTACT US? 9767852959</a>
         </li>
-      </ul>
-      <ul class="iconui">
+        <!-- </ul> -->
+        <!-- <ul class="iconui"> -->
         <img src="./assets/email.png" />
         <img src="./assets/facebook.png" />
         <img src="./assets/instagram.png" />
@@ -42,7 +41,6 @@
         <img src="./assets/twitter.png" />
       </ul>
     </nav>
-    <hr style="height:10px">
     <div class="container">
       <div class="con1">
         <span class="span_consult">Consult</span>
@@ -96,6 +94,7 @@
         <button class="button" type="submit">Submit</button>
       </form>
     </div>
+
     <?php
       $usernam=$_POST["name"];
       $email=$_POST["email"];
@@ -103,17 +102,10 @@
       $message=$_POST["message"];
       $success=false;
       if($_SERVER['REQUEST_METHOD'] === 'POST') {
-        require './php_files/DB.php';
+        require './dataBase/DB.php';
     
       }
-    else{
-      echo `<div class="alert alert-danger alert-dismissible fade show" role="alert">
-      <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div> `;
-    }
+ 
   ?>
   </body>
 </html>
