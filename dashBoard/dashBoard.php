@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="refresh" content="5" />
-    <title>Document</title>
+    <title>DashBoard</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    
   </head>
   <style>
     .head {
@@ -24,10 +25,8 @@
   </style>
   <body>
     <div class="container">
-      <div class="head">
         <h1>All Records</h1>
-        <button class="btn btn-danger" onclick90=<?php echo "hello worldasa"?>>Delete All Records</button>
-      </div>
+   
       <table class="table">
         <thead>
           <tr>
@@ -50,7 +49,6 @@
             $result=mysqli_query($conn,$sql);
             $SrNo=0;
             while ($row=mysqli_fetch_assoc($result)) {
-
               $SrNo=$SrNo+1;
               echo"
               <tr>

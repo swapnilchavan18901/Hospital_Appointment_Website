@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="style.css" />
 
     <title>GPPhospitals</title>
+   
   </head>
   <body>
     <?php error_reporting(0); ?>
@@ -32,8 +33,6 @@
         <li>
           <a href="#" class="a"> CONTACT US? 9767852959</a>
         </li>
-        <!-- </ul> -->
-        <!-- <ul class="iconui"> -->
         <img src="./assets/email.png" />
         <img src="./assets/facebook.png" />
         <img src="./assets/instagram.png" />
